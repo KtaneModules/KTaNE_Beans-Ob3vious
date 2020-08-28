@@ -476,7 +476,7 @@ Transform:
   m_GameObject: {fileID: 1746943041057746}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.1, y: 1.1, z: 1.1}
   m_Children: []
   m_Father: {fileID: 4381310078329132}
   m_RootOrder: 0
@@ -489,7 +489,7 @@ Transform:
   m_GameObject: {fileID: 1764269183999942}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.1, y: 1.1, z: 1.1}
   m_Children: []
   m_Father: {fileID: 4095985578588934}
   m_RootOrder: 0
@@ -546,7 +546,7 @@ Transform:
   m_GameObject: {fileID: 1819397770226030}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.1, y: 1.1, z: 1.1}
   m_Children: []
   m_Father: {fileID: 4763877635404966}
   m_RootOrder: 0
@@ -559,7 +559,7 @@ Transform:
   m_GameObject: {fileID: 1539295947890454}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.1, y: 1.1, z: 1.1}
   m_Children: []
   m_Father: {fileID: 4386614260914366}
   m_RootOrder: 0
@@ -614,7 +614,7 @@ Transform:
   m_GameObject: {fileID: 1529042355866234}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.1, y: 1.1, z: 1.1}
   m_Children: []
   m_Father: {fileID: 4177274487141938}
   m_RootOrder: 0
@@ -627,7 +627,7 @@ Transform:
   m_GameObject: {fileID: 1439837022587366}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.1, y: 1.1, z: 1.1}
   m_Children: []
   m_Father: {fileID: 4208856025623516}
   m_RootOrder: 0
@@ -670,7 +670,7 @@ Transform:
   m_GameObject: {fileID: 1335084764856918}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.1, y: 1.1, z: 1.1}
   m_Children: []
   m_Father: {fileID: 4612820869398462}
   m_RootOrder: 0
@@ -710,7 +710,7 @@ Transform:
   m_GameObject: {fileID: 1693832808130602}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.1, y: 1.1, z: 1.1}
   m_Children: []
   m_Father: {fileID: 4906429558147288}
   m_RootOrder: 0
@@ -736,7 +736,7 @@ Transform:
   m_GameObject: {fileID: 1621185101454284}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.1, y: 1.1, z: 1.1}
   m_Children: []
   m_Father: {fileID: 4336668014262036}
   m_RootOrder: 0
@@ -1414,7 +1414,7 @@ MonoBehaviour:
   m_Script: {fileID: -706292897, guid: 45b809be76fd7a3468b6f517bced6f28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HighlightScale: {x: 0, y: 0, z: 0}
+  HighlightScale: {x: 0.5, y: 0.5, z: 0.5}
   OutlineAmount: 0
 --- !u!114 &114186882695072206
 MonoBehaviour:
@@ -1606,7 +1606,7 @@ MonoBehaviour:
   m_Script: {fileID: -706292897, guid: 45b809be76fd7a3468b6f517bced6f28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HighlightScale: {x: 0, y: 0, z: 0}
+  HighlightScale: {x: 0.5, y: 0.5, z: 0.5}
   OutlineAmount: 0
 --- !u!114 &114451781231111028
 MonoBehaviour:
@@ -1689,7 +1689,7 @@ MonoBehaviour:
   m_Script: {fileID: -706292897, guid: 45b809be76fd7a3468b6f517bced6f28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HighlightScale: {x: 0, y: 0, z: 0}
+  HighlightScale: {x: 0.5, y: 0.5, z: 0.5}
   OutlineAmount: 0
 --- !u!114 &114581994851413514
 MonoBehaviour:
@@ -1737,7 +1737,7 @@ MonoBehaviour:
   m_Script: {fileID: -706292897, guid: 45b809be76fd7a3468b6f517bced6f28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HighlightScale: {x: 0, y: 0, z: 0}
+  HighlightScale: {x: 0.5, y: 0.5, z: 0.5}
   OutlineAmount: 0
 --- !u!114 &114722735355536940
 MonoBehaviour:
@@ -1750,7 +1750,7 @@ MonoBehaviour:
   m_Script: {fileID: -706292897, guid: 45b809be76fd7a3468b6f517bced6f28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HighlightScale: {x: 0, y: 0, z: 0}
+  HighlightScale: {x: 0.5, y: 0.5, z: 0.5}
   OutlineAmount: 0
 --- !u!114 &114727347922480168
 MonoBehaviour:
@@ -1763,7 +1763,7 @@ MonoBehaviour:
   m_Script: {fileID: -706292897, guid: 45b809be76fd7a3468b6f517bced6f28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HighlightScale: {x: 0, y: 0, z: 0}
+  HighlightScale: {x: 0.5, y: 0.5, z: 0.5}
   OutlineAmount: 0
 --- !u!114 &114759364101523022
 MonoBehaviour:
@@ -1776,7 +1776,7 @@ MonoBehaviour:
   m_Script: {fileID: -706292897, guid: 45b809be76fd7a3468b6f517bced6f28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HighlightScale: {x: 0, y: 0, z: 0}
+  HighlightScale: {x: 0.5, y: 0.5, z: 0.5}
   OutlineAmount: 0
 --- !u!114 &114818622190230758
 MonoBehaviour:
@@ -1789,7 +1789,7 @@ MonoBehaviour:
   m_Script: {fileID: -706292897, guid: 45b809be76fd7a3468b6f517bced6f28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HighlightScale: {x: 0, y: 0, z: 0}
+  HighlightScale: {x: 0.5, y: 0.5, z: 0.5}
   OutlineAmount: 0
 --- !u!114 &114836989102042314
 MonoBehaviour:
@@ -1912,5 +1912,5 @@ MonoBehaviour:
   m_Script: {fileID: -706292897, guid: 45b809be76fd7a3468b6f517bced6f28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HighlightScale: {x: 0, y: 0, z: 0}
+  HighlightScale: {x: 0.5, y: 0.5, z: 0.5}
   OutlineAmount: 0

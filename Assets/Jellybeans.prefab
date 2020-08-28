@@ -20,7 +20,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4496436203001196}
   - component: {fileID: 33284289317770732}
-  - component: {fileID: 136104568275387210}
   - component: {fileID: 114630481771011056}
   m_Layer: 0
   m_Name: Beanlight
@@ -38,7 +37,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4329146825595782}
   - component: {fileID: 33742016565298766}
-  - component: {fileID: 136722665676824372}
   - component: {fileID: 23007713725774264}
   - component: {fileID: 114097904824220706}
   - component: {fileID: 114176514609898452}
@@ -58,7 +56,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4794466033786462}
   - component: {fileID: 33507452241764558}
-  - component: {fileID: 136808292186440226}
   - component: {fileID: 114074023077855644}
   m_Layer: 0
   m_Name: Beanlight
@@ -76,7 +73,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4282293440428634}
   - component: {fileID: 33871055976244026}
-  - component: {fileID: 136588789850254998}
   - component: {fileID: 23605540647843926}
   - component: {fileID: 114056680418972968}
   - component: {fileID: 114843865405421972}
@@ -111,7 +107,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4509609721069670}
   - component: {fileID: 33068472527482302}
-  - component: {fileID: 136808802730708884}
   - component: {fileID: 23134632593088104}
   - component: {fileID: 114009770331133454}
   - component: {fileID: 114761422815538210}
@@ -131,7 +126,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4970452736901956}
   - component: {fileID: 33023708421712540}
-  - component: {fileID: 136075078236718124}
   - component: {fileID: 114341288744847832}
   m_Layer: 0
   m_Name: Beanlight
@@ -149,7 +143,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4411129900900798}
   - component: {fileID: 33535151646624232}
-  - component: {fileID: 136221960794574980}
   - component: {fileID: 114794513004539412}
   m_Layer: 0
   m_Name: Beanlight
@@ -167,7 +160,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4646642704620682}
   - component: {fileID: 33052178437936590}
-  - component: {fileID: 136513383724461800}
   - component: {fileID: 114347658245478040}
   m_Layer: 0
   m_Name: Beanlight
@@ -185,7 +177,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4870199127781764}
   - component: {fileID: 33771867189895514}
-  - component: {fileID: 136512088449582848}
   - component: {fileID: 23505846029601870}
   - component: {fileID: 114600719607620002}
   - component: {fileID: 114570439073434788}
@@ -205,7 +196,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4783973733159930}
   - component: {fileID: 33276651133459944}
-  - component: {fileID: 136612494000033848}
   - component: {fileID: 114223040060204336}
   m_Layer: 0
   m_Name: Beanlight
@@ -223,7 +213,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4036546772483944}
   - component: {fileID: 33050933301221108}
-  - component: {fileID: 136691706054298868}
   - component: {fileID: 114171135873349194}
   m_Layer: 0
   m_Name: Beanlight
@@ -259,7 +248,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4797467075717858}
   - component: {fileID: 33848241190663248}
-  - component: {fileID: 136476255294398502}
   - component: {fileID: 23231472816086364}
   - component: {fileID: 114633646832155108}
   - component: {fileID: 114602888075671626}
@@ -279,7 +267,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4897935270286954}
   - component: {fileID: 33185612131349922}
-  - component: {fileID: 136736270512054202}
   - component: {fileID: 23772663648133880}
   - component: {fileID: 114789860277394894}
   - component: {fileID: 114530260670456498}
@@ -299,7 +286,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4208717028725266}
   - component: {fileID: 33865222800051774}
-  - component: {fileID: 136728473479829394}
   - component: {fileID: 114430796214875012}
   m_Layer: 0
   m_Name: Beanlight
@@ -317,7 +303,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4290799208425528}
   - component: {fileID: 33793192835732992}
-  - component: {fileID: 136725173313511862}
   - component: {fileID: 114004028239786706}
   m_Layer: 0
   m_Name: Beanlight
@@ -335,7 +320,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4319750243483130}
   - component: {fileID: 33661098913179050}
-  - component: {fileID: 136341079344616462}
   - component: {fileID: 23596244312369690}
   - component: {fileID: 114466766905886364}
   - component: {fileID: 114948041875510224}
@@ -355,7 +339,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4516524577567188}
   - component: {fileID: 33378535953635440}
-  - component: {fileID: 136298087340694770}
   - component: {fileID: 114839092091947870}
   m_Layer: 0
   m_Name: Beanlight
@@ -373,7 +356,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4355423344031598}
   - component: {fileID: 33059776818130358}
-  - component: {fileID: 136777947681858284}
   - component: {fileID: 23878227797803616}
   - component: {fileID: 114367033102144918}
   - component: {fileID: 114339726596948986}
@@ -393,7 +375,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4767531487065436}
   - component: {fileID: 33392763728433790}
-  - component: {fileID: 136440518155416096}
   - component: {fileID: 114699823394823240}
   m_Layer: 0
   m_Name: Beanlight
@@ -411,7 +392,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4040079957948562}
   - component: {fileID: 33253798797015354}
-  - component: {fileID: 136672618031717200}
   - component: {fileID: 23525042006162532}
   - component: {fileID: 114890043715049242}
   - component: {fileID: 114589945583417068}
@@ -431,7 +411,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4406561969122788}
   - component: {fileID: 33549674224499114}
-  - component: {fileID: 136543758853187700}
   - component: {fileID: 114466036596359850}
   m_Layer: 0
   m_Name: Beanlight
@@ -449,7 +428,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4339521171560844}
   - component: {fileID: 33900514435639526}
-  - component: {fileID: 136606025740200752}
   - component: {fileID: 114666036059573296}
   m_Layer: 0
   m_Name: Beanlight
@@ -467,7 +445,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4407207163962720}
   - component: {fileID: 33681466815369522}
-  - component: {fileID: 136819546414972932}
   - component: {fileID: 114743319248575462}
   m_Layer: 0
   m_Name: Beanlight
@@ -485,7 +462,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4051916239076714}
   - component: {fileID: 33886228167726448}
-  - component: {fileID: 136317325484729468}
   - component: {fileID: 23012666869019360}
   - component: {fileID: 114699074621753888}
   - component: {fileID: 114307946715309544}
@@ -505,7 +481,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4695541924360352}
   - component: {fileID: 33446169101759092}
-  - component: {fileID: 136960845450284204}
   - component: {fileID: 23092759137787076}
   - component: {fileID: 114775507844496654}
   - component: {fileID: 114167727153272498}
@@ -525,7 +500,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4560351969071800}
   - component: {fileID: 33880280650242508}
-  - component: {fileID: 136974984780649470}
   - component: {fileID: 114959271823250078}
   m_Layer: 0
   m_Name: Beanlight
@@ -543,7 +517,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4465583499936888}
   - component: {fileID: 33225959010724632}
-  - component: {fileID: 136643746570489258}
   - component: {fileID: 114981720391261328}
   m_Layer: 0
   m_Name: Beanlight
@@ -561,7 +534,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4778515132500238}
   - component: {fileID: 33127742457125988}
-  - component: {fileID: 136933877295814000}
   - component: {fileID: 23336105173953044}
   - component: {fileID: 114687325883968012}
   - component: {fileID: 114084102273871672}
@@ -581,7 +553,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4337035542855236}
   - component: {fileID: 33084567909061916}
-  - component: {fileID: 136500669281078914}
   - component: {fileID: 23971697428916788}
   - component: {fileID: 114075600314416972}
   - component: {fileID: 114221570011163426}
@@ -601,7 +572,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4279315833011664}
   - component: {fileID: 33156372923453718}
-  - component: {fileID: 136512379830927328}
   - component: {fileID: 23888208845489512}
   - component: {fileID: 114459068167072386}
   - component: {fileID: 114364869930080744}
@@ -637,7 +607,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4454867489273820}
   - component: {fileID: 33158386604434826}
-  - component: {fileID: 136529825941680806}
   - component: {fileID: 23951239738078934}
   - component: {fileID: 114076018008461664}
   - component: {fileID: 114824362251765408}
@@ -657,7 +626,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4654147498597150}
   - component: {fileID: 33619185300487812}
-  - component: {fileID: 136359914445986606}
   - component: {fileID: 114396843005808018}
   m_Layer: 0
   m_Name: Beanlight
@@ -675,7 +643,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4973862022294248}
   - component: {fileID: 33818276553562156}
-  - component: {fileID: 136225809010665156}
   - component: {fileID: 23077289252458076}
   - component: {fileID: 114204899487324924}
   - component: {fileID: 114787855112090262}
@@ -695,7 +662,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4326424975534470}
   - component: {fileID: 33269056213681262}
-  - component: {fileID: 136902825986586664}
   - component: {fileID: 114770501155341300}
   m_Layer: 0
   m_Name: Beanlight
@@ -713,7 +679,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4751873561379860}
   - component: {fileID: 33640996343604778}
-  - component: {fileID: 136541043965493640}
   - component: {fileID: 114947304713655378}
   m_Layer: 0
   m_Name: Beanlight
@@ -731,7 +696,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4584126298341694}
   - component: {fileID: 33250005723249324}
-  - component: {fileID: 136017161574395992}
   - component: {fileID: 23279140744212294}
   - component: {fileID: 114118985799745762}
   - component: {fileID: 114730456420765590}
@@ -751,7 +715,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4244518845149154}
   - component: {fileID: 33148095325638928}
-  - component: {fileID: 136164166875211368}
   - component: {fileID: 23356937343043412}
   - component: {fileID: 114922793044624496}
   - component: {fileID: 114727921610969842}
@@ -771,7 +734,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4680391033592554}
   - component: {fileID: 33125900732590840}
-  - component: {fileID: 136066521309426880}
   - component: {fileID: 114711453262137278}
   m_Layer: 0
   m_Name: Beanlight
@@ -804,7 +766,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4628671474815754}
   - component: {fileID: 33763826485118848}
-  - component: {fileID: 136317637353597922}
   - component: {fileID: 23334616198725154}
   - component: {fileID: 114430924252659406}
   - component: {fileID: 114780010416736516}
@@ -824,7 +785,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4654769475150852}
   - component: {fileID: 33966999451457574}
-  - component: {fileID: 136598379324968590}
   - component: {fileID: 23437729302547730}
   - component: {fileID: 114131400873389394}
   - component: {fileID: 114467455416092004}
@@ -864,7 +824,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4926720370310032}
   - component: {fileID: 33202827073194336}
-  - component: {fileID: 136939065148516868}
   - component: {fileID: 23421328467068912}
   - component: {fileID: 114669864328738420}
   - component: {fileID: 114427946631698302}
@@ -884,7 +843,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4468791696354938}
   - component: {fileID: 33665698427129430}
-  - component: {fileID: 136958587856404472}
   - component: {fileID: 23492853013690170}
   - component: {fileID: 114867377288914232}
   - component: {fileID: 114475737052657996}
@@ -904,7 +862,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4084129491252032}
   - component: {fileID: 33224020483680592}
-  - component: {fileID: 136702778328411596}
   - component: {fileID: 23772878449190386}
   - component: {fileID: 114096859588223564}
   - component: {fileID: 114430282262459446}
@@ -924,7 +881,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4267503586807900}
   - component: {fileID: 33516963168501956}
-  - component: {fileID: 136054180903629936}
   - component: {fileID: 23672743469298202}
   - component: {fileID: 114971058749358302}
   - component: {fileID: 114627580468506332}
@@ -944,7 +900,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4261716747524848}
   - component: {fileID: 33536339717528880}
-  - component: {fileID: 136088845582184066}
   - component: {fileID: 114323128935108762}
   m_Layer: 0
   m_Name: Beanlight
@@ -962,7 +917,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4159495614996728}
   - component: {fileID: 33217905209930642}
-  - component: {fileID: 136268855852569116}
   - component: {fileID: 114960161182987496}
   m_Layer: 0
   m_Name: Beanlight
@@ -997,7 +951,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4280163037816498}
   - component: {fileID: 33593002297481682}
-  - component: {fileID: 136080906730940962}
   - component: {fileID: 23318539205753850}
   - component: {fileID: 114870728867560586}
   - component: {fileID: 114606392830485264}
@@ -1017,7 +970,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4614220947057126}
   - component: {fileID: 33584394071403388}
-  - component: {fileID: 136959806051345278}
   - component: {fileID: 114617341374786434}
   m_Layer: 0
   m_Name: Beanlight
@@ -1035,7 +987,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4199963860065224}
   - component: {fileID: 33587310080010330}
-  - component: {fileID: 136645450460171976}
   - component: {fileID: 114208824579584900}
   m_Layer: 0
   m_Name: Beanlight
@@ -1071,7 +1022,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4950291622755368}
   - component: {fileID: 33286950473137410}
-  - component: {fileID: 136120004470239032}
   - component: {fileID: 114321321714895998}
   m_Layer: 0
   m_Name: Beanlight
@@ -1546,7 +1496,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1721384206857514}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.1, y: 0, z: -0.1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4237341727753296}
@@ -3191,7 +3141,7 @@ MonoBehaviour:
   m_Script: {fileID: -706292897, guid: 45b809be76fd7a3468b6f517bced6f28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HighlightScale: {x: 0, y: 0, z: 0}
+  HighlightScale: {x: 0.5, y: 0.5, z: 0.5}
   OutlineAmount: 0
 --- !u!114 &114009770331133454
 MonoBehaviour:
@@ -3248,7 +3198,7 @@ MonoBehaviour:
   m_Script: {fileID: -706292897, guid: 45b809be76fd7a3468b6f517bced6f28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HighlightScale: {x: 0, y: 0, z: 0}
+  HighlightScale: {x: 0.5, y: 0.5, z: 0.5}
   OutlineAmount: 0
 --- !u!114 &114075600314416972
 MonoBehaviour:
@@ -3419,7 +3369,7 @@ MonoBehaviour:
   m_Script: {fileID: -706292897, guid: 45b809be76fd7a3468b6f517bced6f28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HighlightScale: {x: 0, y: 0, z: 0}
+  HighlightScale: {x: 0.5, y: 0.5, z: 0.5}
   OutlineAmount: 0
 --- !u!114 &114176514609898452
 MonoBehaviour:
@@ -3514,7 +3464,7 @@ MonoBehaviour:
   m_Script: {fileID: -706292897, guid: 45b809be76fd7a3468b6f517bced6f28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HighlightScale: {x: 0, y: 0, z: 0}
+  HighlightScale: {x: 0.5, y: 0.5, z: 0.5}
   OutlineAmount: 0
 --- !u!114 &114221570011163426
 MonoBehaviour:
@@ -3540,7 +3490,7 @@ MonoBehaviour:
   m_Script: {fileID: -706292897, guid: 45b809be76fd7a3468b6f517bced6f28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HighlightScale: {x: 0, y: 0, z: 0}
+  HighlightScale: {x: 0.5, y: 0.5, z: 0.5}
   OutlineAmount: 0
 --- !u!114 &114307946715309544
 MonoBehaviour:
@@ -3566,7 +3516,7 @@ MonoBehaviour:
   m_Script: {fileID: -706292897, guid: 45b809be76fd7a3468b6f517bced6f28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HighlightScale: {x: 0, y: 0, z: 0}
+  HighlightScale: {x: 0.5, y: 0.5, z: 0.5}
   OutlineAmount: 0
 --- !u!114 &114323128935108762
 MonoBehaviour:
@@ -3579,7 +3529,7 @@ MonoBehaviour:
   m_Script: {fileID: -706292897, guid: 45b809be76fd7a3468b6f517bced6f28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HighlightScale: {x: 0, y: 0, z: 0}
+  HighlightScale: {x: 0.5, y: 0.5, z: 0.5}
   OutlineAmount: 0
 --- !u!114 &114339726596948986
 MonoBehaviour:
@@ -3605,7 +3555,7 @@ MonoBehaviour:
   m_Script: {fileID: -706292897, guid: 45b809be76fd7a3468b6f517bced6f28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HighlightScale: {x: 0, y: 0, z: 0}
+  HighlightScale: {x: 0.5, y: 0.5, z: 0.5}
   OutlineAmount: 0
 --- !u!114 &114347658245478040
 MonoBehaviour:
@@ -3618,7 +3568,7 @@ MonoBehaviour:
   m_Script: {fileID: -706292897, guid: 45b809be76fd7a3468b6f517bced6f28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HighlightScale: {x: 0, y: 0, z: 0}
+  HighlightScale: {x: 0.5, y: 0.5, z: 0.5}
   OutlineAmount: 0
 --- !u!114 &114364869930080744
 MonoBehaviour:
@@ -3666,7 +3616,7 @@ MonoBehaviour:
   m_Script: {fileID: -706292897, guid: 45b809be76fd7a3468b6f517bced6f28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HighlightScale: {x: 0, y: 0, z: 0}
+  HighlightScale: {x: 0.5, y: 0.5, z: 0.5}
   OutlineAmount: 0
 --- !u!114 &114406331319315170
 MonoBehaviour:
@@ -3716,7 +3666,7 @@ MonoBehaviour:
   m_Script: {fileID: -706292897, guid: 45b809be76fd7a3468b6f517bced6f28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HighlightScale: {x: 0, y: 0, z: 0}
+  HighlightScale: {x: 0.5, y: 0.5, z: 0.5}
   OutlineAmount: 0
 --- !u!114 &114430924252659406
 MonoBehaviour:
@@ -3773,7 +3723,7 @@ MonoBehaviour:
   m_Script: {fileID: -706292897, guid: 45b809be76fd7a3468b6f517bced6f28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HighlightScale: {x: 0, y: 0, z: 0}
+  HighlightScale: {x: 0.5, y: 0.5, z: 0.5}
   OutlineAmount: 0
 --- !u!114 &114466766905886364
 MonoBehaviour:
@@ -3989,7 +3939,7 @@ MonoBehaviour:
   m_Script: {fileID: -706292897, guid: 45b809be76fd7a3468b6f517bced6f28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HighlightScale: {x: 0, y: 0, z: 0}
+  HighlightScale: {x: 0.5, y: 0.5, z: 0.5}
   OutlineAmount: 0
 --- !u!114 &114627580468506332
 MonoBehaviour:
@@ -4015,7 +3965,7 @@ MonoBehaviour:
   m_Script: {fileID: -706292897, guid: 45b809be76fd7a3468b6f517bced6f28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HighlightScale: {x: 0, y: 0, z: 0}
+  HighlightScale: {x: 0.5, y: 0.5, z: 0.5}
   OutlineAmount: 0
 --- !u!114 &114633646832155108
 MonoBehaviour:
@@ -4063,7 +4013,7 @@ MonoBehaviour:
   m_Script: {fileID: -706292897, guid: 45b809be76fd7a3468b6f517bced6f28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HighlightScale: {x: 0, y: 0, z: 0}
+  HighlightScale: {x: 0.5, y: 0.5, z: 0.5}
   OutlineAmount: 0
 --- !u!114 &114669864328738420
 MonoBehaviour:
@@ -4155,7 +4105,7 @@ MonoBehaviour:
   m_Script: {fileID: -706292897, guid: 45b809be76fd7a3468b6f517bced6f28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HighlightScale: {x: 0, y: 0, z: 0}
+  HighlightScale: {x: 0.5, y: 0.5, z: 0.5}
   OutlineAmount: 0
 --- !u!114 &114711453262137278
 MonoBehaviour:
@@ -4168,7 +4118,7 @@ MonoBehaviour:
   m_Script: {fileID: -706292897, guid: 45b809be76fd7a3468b6f517bced6f28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HighlightScale: {x: 0, y: 0, z: 0}
+  HighlightScale: {x: 0.5, y: 0.5, z: 0.5}
   OutlineAmount: 0
 --- !u!114 &114727921610969842
 MonoBehaviour:
@@ -4207,7 +4157,7 @@ MonoBehaviour:
   m_Script: {fileID: -706292897, guid: 45b809be76fd7a3468b6f517bced6f28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HighlightScale: {x: 0, y: 0, z: 0}
+  HighlightScale: {x: 0.5, y: 0.5, z: 0.5}
   OutlineAmount: 0
 --- !u!114 &114761422815538210
 MonoBehaviour:
@@ -4233,7 +4183,7 @@ MonoBehaviour:
   m_Script: {fileID: -706292897, guid: 45b809be76fd7a3468b6f517bced6f28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HighlightScale: {x: 0, y: 0, z: 0}
+  HighlightScale: {x: 0.5, y: 0.5, z: 0.5}
   OutlineAmount: 0
 --- !u!114 &114775507844496654
 MonoBehaviour:
@@ -4316,7 +4266,7 @@ MonoBehaviour:
   m_Script: {fileID: -706292897, guid: 45b809be76fd7a3468b6f517bced6f28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HighlightScale: {x: 0, y: 0, z: 0}
+  HighlightScale: {x: 0.5, y: 0.5, z: 0.5}
   OutlineAmount: 0
 --- !u!114 &114795817591650990
 MonoBehaviour:
@@ -4355,7 +4305,7 @@ MonoBehaviour:
   m_Script: {fileID: -706292897, guid: 45b809be76fd7a3468b6f517bced6f28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HighlightScale: {x: 0, y: 0, z: 0}
+  HighlightScale: {x: 0.5, y: 0.5, z: 0.5}
   OutlineAmount: 0
 --- !u!114 &114843865405421972
 MonoBehaviour:
@@ -4480,7 +4430,7 @@ MonoBehaviour:
   m_Script: {fileID: -706292897, guid: 45b809be76fd7a3468b6f517bced6f28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HighlightScale: {x: 0, y: 0, z: 0}
+  HighlightScale: {x: 0.5, y: 0.5, z: 0.5}
   OutlineAmount: 0
 --- !u!114 &114948041875510224
 MonoBehaviour:
@@ -4506,7 +4456,7 @@ MonoBehaviour:
   m_Script: {fileID: -706292897, guid: 45b809be76fd7a3468b6f517bced6f28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HighlightScale: {x: 0, y: 0, z: 0}
+  HighlightScale: {x: 0.5, y: 0.5, z: 0.5}
   OutlineAmount: 0
 --- !u!114 &114960161182987496
 MonoBehaviour:
@@ -4519,7 +4469,7 @@ MonoBehaviour:
   m_Script: {fileID: -706292897, guid: 45b809be76fd7a3468b6f517bced6f28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HighlightScale: {x: 0, y: 0, z: 0}
+  HighlightScale: {x: 0.5, y: 0.5, z: 0.5}
   OutlineAmount: 0
 --- !u!114 &114971058749358302
 MonoBehaviour:
@@ -4554,655 +4504,5 @@ MonoBehaviour:
   m_Script: {fileID: -706292897, guid: 45b809be76fd7a3468b6f517bced6f28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HighlightScale: {x: 0, y: 0, z: 0}
+  HighlightScale: {x: 0.5, y: 0.5, z: 0.5}
   OutlineAmount: 0
---- !u!136 &136017161574395992
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1633762265554860}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &136054180903629936
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1775471150520382}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &136066521309426880
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1660993254194600}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &136075078236718124
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1191427930693730}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &136080906730940962
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1809558955560734}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &136088845582184066
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1802192384944462}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &136104568275387210
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1001438529047862}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &136120004470239032
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1971144358946440}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &136164166875211368
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1637021875970276}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &136221960794574980
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1191586038943988}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &136225809010665156
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1584851077714612}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &136268855852569116
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1808078165821154}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &136298087340694770
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1285839431967508}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &136317325484729468
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1454091492333860}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &136317637353597922
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1680011152749324}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &136341079344616462
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1280443557700280}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &136359914445986606
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1584342086833666}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &136440518155416096
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1355921561258020}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &136476255294398502
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1248972307948904}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &136500669281078914
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1554649302595070}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &136512088449582848
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1214312228044082}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &136512379830927328
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1564951752079112}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &136513383724461800
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1194201735116188}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &136529825941680806
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1577104027101470}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &136541043965493640
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1605905191641508}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &136543758853187700
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1386263304662256}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &136588789850254998
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1109303211307904}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &136598379324968590
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1681574815510862}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &136606025740200752
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1392404212741124}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &136612494000033848
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1228961233523136}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &136643746570489258
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1522786570978590}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &136645450460171976
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1949151601006096}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &136672618031717200
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1367962528292496}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &136691706054298868
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1228989621937184}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &136702778328411596
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1764100307999376}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &136722665676824372
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1005250726478970}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &136725173313511862
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1273655915719662}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &136728473479829394
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1265485833551698}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &136736270512054202
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1254255268270192}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &136777947681858284
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1287646066078148}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &136808292186440226
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1090727666120922}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &136808802730708884
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1150053328079636}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &136819546414972932
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1405995152022094}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &136902825986586664
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1596946536250806}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &136933877295814000
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1545558789756806}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &136939065148516868
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1726889736179442}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &136958587856404472
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1739023958279752}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &136959806051345278
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1935488912779932}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &136960845450284204
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1454896138755594}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &136974984780649470
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1495912828633504}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}

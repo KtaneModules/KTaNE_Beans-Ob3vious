@@ -26,7 +26,7 @@ public class beanboozledAgainScript : MonoBehaviour {
 	private int[] numkey = new int[3];
 	private int[][] setnums = new int[][] { new int[] { }, new int[] { }, new int[] { }, new int[] { } };
 	private readonly int[][] colours = { new int[] { 0, 0, 0 }, new int[] { 1, 1, 0 }, new int[] { 2, 1, 0 }, new int[] { 1, 2, 0 }, new int[] { 2, 2, 0 }, new int[] { 3, 1, 0 }, new int[] { 1, 3, 0 }, new int[] { 3, 2, 0 }, new int[] { 2, 3, 0 }, new int[] { 3, 3, 0 }, new int[] { 2, 2, 1 }, new int[] { 3, 2, 1 }, new int[] { 2, 3, 1 }, new int[] { 3, 3, 1 }, new int[] { 3, 3, 2 }, new int[] { 3, 3, 3 } };
-	private readonly string[] words = { "BEANBOOZLED", "BEANEDAGAIN", "BAMBOOZLING", "TOOCOLOURFUL", "BEANINGS", "HYPERBEANS", "ULTRABEANS", "COOLBEANS", "ROTTENBEANS", "JELLYBEANS", "LONGBEANS", "BEANBEANBEAN", "NOTGOODBEAN", "BEANBOOZLING", "SAUCEDBEANS", "BAKEDBEANS", "BEANOVERLOAD", "BEANCIPHER", "YOUCANTBEATBEANS", "BURNEDBEAN", "KILLERBEAN", "INEDIBLE", "SURELYNOTCORN", "BEANKRUPT", "SUPERMARKET", "GROCERIES", "ROWANATKINSON", "MEANDTHEBOYS", "AT3AMLOOKING", "FORBEANS", "DANSBEANS", "POGBEANS", "BEANSANITY" };
+	private readonly string[] words = { "BEANBOOZLED", "BEANEDAGAIN", "BAMBOOZLING", "TOOCOLOURFUL", "BEANINGS", "HYPERBEANS", "ULTRABEANS", "COOLBEANS", "ROTTENBEANS", "JELLYBEANS", "LONGBEANS", "BEANBEANBEAN", "NOTGOODBEAN", "SAUCEDBEANS", "BAKEDBEANS", "BEANOVERLOAD", "BEANCIPHER", "YOUCANTBEATBEANS", "BURNEDBEAN", "KILLERBEAN", "INEDIBLE", "SURELYNOTCORN", "BEANKRUPT", "SUPERMARKET", "GROCERIES", "ROWANATKINSON", "MEANDTHEBOYS", "AT3AMLOOKING", "FORBEANS", "DANSBEANS", "POGBEANS", "BEANSANITY" };
 	private int wordindex;
 	private int[] Initvalues = new int[8];
 	private int[] BeanFmem = { 0, -1, -1, -1 };
@@ -62,13 +62,14 @@ public class beanboozledAgainScript : MonoBehaviour {
 					correct[presscount] = true;
 					Debug.LogFormat("[Beanboozled Again #{0}] You pressed bean {1} at {2} seconds which is correct.", _moduleID, pos + 1, (int)BombInfo.GetTime());
 				}
-				else
-					Debug.LogFormat("[Beanboozled Again #{0}] You pressed bean {1} at {2} seconds which is incorrect.", _moduleID, pos + 1, (int)BombInfo.GetTime());
-				if (pos == GoodPress[0])
+				else if (pos == GoodPress[0])
 				{
 					almost[presscount] = true;
-					Debug.LogFormat("[Beanboozled Again #{0}] You pressed bean {1} at {2} seconds which is correct.", _moduleID, pos + 1, (int)BombInfo.GetTime());
+					Debug.LogFormat("[Beanboozled Again #{0}] You pressed bean {1} at {2} seconds which is almost correct.", _moduleID, pos + 1, (int)BombInfo.GetTime());
 				}
+				else
+					Debug.LogFormat("[Beanboozled Again #{0}] You pressed bean {1} at {2} seconds which is incorrect.", _moduleID, pos + 1, (int)BombInfo.GetTime());
+				
 				BeanLights[presscount].material.color = new Color(1, 1, 1);
 				presscount++;
 				if (presscount == 5)
@@ -94,12 +95,29 @@ public class beanboozledAgainScript : MonoBehaviour {
 						Display[0].text = "";
 						Display[1].text = "";
 					}
+					else if (correct.Count(x => x) + almost.Count(x => x) == 5)
+					{
+						presscount = 0;
+						int[] randomnums = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 };
+						for (int i = 0; i < 3; i++)
+						{
+							beanArray[pos][i] = randomnums.Where(x => !beanArray[pos].Take(i).Contains(x)).ToArray()[Rnd.Range(0, randomnums.Where(x => !beanArray[pos].Take(i).Contains(x)).ToArray().Length)];
+						}
+						for (int i = 0; i < 2; i++)
+						{
+							BeanTexts[pos * 2 + i].text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123"[Rnd.Range(0, 30)].ToString();
+						}
+						Beans[pos].GetComponent<MeshRenderer>().material.color = new Color(colours[beanArray[pos][0]][0] / 3f, colours[beanArray[pos][0]][1] / 3f, colours[beanArray[pos][0]][2] / 3f);
+						BeanTexts[2 * pos].color = new Color(colours[beanArray[pos][1]][0] / 3f, colours[beanArray[pos][1]][1] / 3f, colours[beanArray[pos][1]][2] / 3f);
+						BeanTexts[2 * pos + 1].color = new Color(colours[beanArray[pos][2]][0] / 3f, colours[beanArray[pos][2]][1] / 3f, colours[beanArray[pos][2]][2] / 3f);
+						CalcBeans();
+					}
 					else
 					{
+						Debug.LogFormat("[Beanboozled Again #{0}] Correct: {1}. Almost: {2}.", _moduleID, correct.Join(", "), almost.Join(", "));
 						correct = new bool[5];
 						almost = new bool[5];
 						presscount = 0;
-						Debug.LogFormat("[Beanboozled Again #{0}] {1}.", _moduleID, correct.Join(", "));
 						Module.HandleStrike();
 						wordindex = Rnd.Range(0, words.Length);
 						for (int i = 0; i < 8; i++)
@@ -189,7 +207,6 @@ public class beanboozledAgainScript : MonoBehaviour {
 			Beans[i].OnHighlight += delegate { BeanHovered(x); return; };
 			Beans[i].OnHighlightEnded += delegate { BeanHoverEnded(); return; };
 		}
-
 	}
 
 	void Start () {
@@ -260,6 +277,7 @@ public class beanboozledAgainScript : MonoBehaviour {
 		}
 		Debug.LogFormat("[Beanboozled Again #{0}] I values in order are {1}.", _moduleID, Initvalues.Join(", "));
 		string[] interpretant = { "<>+-[],.←→↑↓⇄⇆↻↺", ">,-↓⇆↑↺]+→←⇄.↻<[", "-→⇄←↑.<+↓>⇆]↻[,↺", "→↑↓[>↻←],⇆+<↺⇄-.", "↺.←+↻-↓⇄→>[,↑<⇆]", "]>←⇆[→↓↑⇄↺.+↻-,<", ",⇄↑>⇆↻→<[↓].-+↺←", "←→-↑+>↻↺⇄⇆.↓<][," };
+		BeanFend = new int[8];
 		for (int i = 0; i < 8; i++)
 		{
 			string command = "";
@@ -273,15 +291,11 @@ public class beanboozledAgainScript : MonoBehaviour {
 			}
 			BeanFmem = new int[] { i, -1, -1, -1 };
 			BeanFvalues[i] = BeanF(Initvalues, command, i);
-			Debug.LogFormat("[Beanboozled Again #{0}] Bean {1} uses command '{2}', resulting in {3}.", _moduleID, i + 1, command, BeanFvalues[i].Join(", "));
-		}
-		for (int i = 0; i < 8; i++)
-		{
-			BeanFend[i] = 0;
 			for (int j = 0; j < 8; j++)
 			{
-				BeanFend[i] += BeanFvalues[j][i];
+				BeanFend[j] += BeanFvalues[i][j];
 			}
+			Debug.LogFormat("[Beanboozled Again #{0}] Bean {1} uses command '{2}', resulting in {3}.", _moduleID, i + 1, command, BeanFvalues[i].Join(", "));
 		}
 		Debug.LogFormat("[Beanboozled Again #{0}] For all beans, sums result in {1}.", _moduleID, BeanFend.Join(", "));
 		for (int i = 0; i < 8; i++)
@@ -298,7 +312,7 @@ public class beanboozledAgainScript : MonoBehaviour {
 		{
 			Totalnums[i] = Setnums[i] * (numkey[0] * 100 + numkey[1] * 10 + numkey[2]) + BeanFend[i];
 		}
-		Debug.LogFormat("[Beanboozled Again #{0}] Total values after modulo are {1}.", _moduleID, Totalnums.Join(", "));
+		Debug.LogFormat("[Beanboozled Again #{0}] Total values are {1}.", _moduleID, Totalnums.Join(", "));
 		for (int i = 0; i < 8; i++)
 		{
 			ColValues[i] = beanArray[i][0] * 240 + beanArray[i][1] * beanArray[i][2];
@@ -581,9 +595,9 @@ public class beanboozledAgainScript : MonoBehaviour {
 						int backup = storage[BeanFmem[2]];
 						storage[BeanFmem[2]] = storage[BeanFmem[3]];
 						storage[BeanFmem[3]] = backup;
+						BeanFmem[2] = -1;
+						BeanFmem[3] = -1;
 					}
-					BeanFmem[2] = -1;
-					BeanFmem[3] = -1;
 					break;
 				case '⇆':
 					BeanFmem[3] = BeanFmem[0];
@@ -592,9 +606,9 @@ public class beanboozledAgainScript : MonoBehaviour {
 						int backup = storage[BeanFmem[2]];
 						storage[BeanFmem[2]] = storage[BeanFmem[3]];
 						storage[BeanFmem[3]] = backup;
+						BeanFmem[2] = -1;
+						BeanFmem[3] = -1;
 					}
-					BeanFmem[2] = -1;
-					BeanFmem[3] = -1;
 					break;
 				case '↻':
 					{
@@ -787,8 +801,11 @@ public class beanboozledAgainScript : MonoBehaviour {
 		yield return true;
 		while (presscount != 5)
 		{
-			while (((int)BombInfo.GetTime() % (Setnums[GoodPress[0]] + ((wordindex / 8) * 10 + wordindex % 8 + 11)) - 1) % 9 + 1 != GoodPress[1])
-				yield return true;
+			if (correct.Count(x => x) == presscount)
+			{
+				while (((int)BombInfo.GetTime() % (Setnums[GoodPress[0]] + ((wordindex / 8) * 10 + wordindex % 8 + 11)) - 1) % 9 + 1 != GoodPress[1])
+					yield return true;
+			}
 			Beans[GoodPress[0]].OnInteract();
 			yield return true;
 		}
