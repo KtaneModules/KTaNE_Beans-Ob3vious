@@ -14,6 +14,7 @@ public class longBeansScript : MonoBehaviour {
 	public KMSelectable[] BigBeans;
 	public KMSelectable[] SmolBeans;
 	public GameObject Text;
+	public GameObject[] Statuslight;
 	public KMBombModule Module;
 
 	private int[] beanArray = new int[10];
@@ -43,19 +44,20 @@ public class longBeansScript : MonoBehaviour {
 				{
                     if (beanArray[bean % 10] == 0)
                     {
-						Debug.LogFormat("[Long Beans #{0}] I guess you ate bean {1}, because bean {2} didn't exist?", _moduleID, pos, bean % 10);
+						Debug.LogFormat("[Long Beans #{0}] Bean {1} didn't exist, so you won't get a strike.", _moduleID, bean % 10);
 					}
                     else
                     {
 						Debug.LogFormat("[Long Beans #{0}] Why did you eat bean {1}, when you were supposed to eat bean {2}?", _moduleID, pos, bean % 10);
+						Module.HandleStrike();
 					}
-					Module.HandleStrike();
 				}
 				beanArray[pos] = 0;
 				eatenbeans++;
 				if (eatenbeans == 3)
 				{
 					Module.HandlePass();
+					Solve();
 				}
 			}
 			//BigBeans[pos].GetComponent<Renderer>().enabled = false;
@@ -154,6 +156,11 @@ public class longBeansScript : MonoBehaviour {
 				SmolBeans[i].transform.localScale = new Vector3(0f, 0f, 0f);
 			}
 		}
+	}
+
+	private void Solve()
+	{
+		Statuslight[0].GetComponent<MeshRenderer>().enabled = false;
 	}
 
 #pragma warning disable 414

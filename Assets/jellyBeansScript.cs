@@ -13,6 +13,7 @@ public class jellyBeansScript : MonoBehaviour {
 	public KMBombInfo BombInfo;
 	public KMSelectable[] Beans;
 	public GameObject Text;
+	public GameObject Statuslight;
 	public KMBombModule Module;
 
 	private int[] beanArray = new int[25];
@@ -60,6 +61,7 @@ public class jellyBeansScript : MonoBehaviour {
 				if (!beansafe[pos])
 				{
 					Debug.LogFormat("[Jellybeans #{0}] Bean {1} is not edible. Maybe try another one?", _moduleID, pos + 1);
+					StartCoroutine(Strike());
 					Module.HandleStrike();
 				}
 				for (int i = 0; i < 25; i++)
@@ -100,6 +102,7 @@ public class jellyBeansScript : MonoBehaviour {
                 if (!cont)
                 {
 					Module.HandlePass();
+					Solve();
 					solved = true;
                 }
 			}
@@ -192,6 +195,7 @@ public class jellyBeansScript : MonoBehaviour {
 			Beans[i].GetComponent<MeshRenderer>().material.color = new Color((beanArray[i] / 16) / 3f, ((beanArray[i] / 4) % 4) / 3f, (beanArray[i] % 4) / 3f);
 			Beans[i].transform.localEulerAngles = new Vector3(90f, offset[i], 0f);
 		}
+		Statuslight.GetComponent<MeshRenderer>().material.color = new Color(Rnd.Range(0, 4) / 3f, Rnd.Range(0, 4) / 3f, Rnd.Range(0, 4) / 3f);
 	}
 
 	private int Value (int num) {
@@ -211,6 +215,19 @@ public class jellyBeansScript : MonoBehaviour {
 		return n;
 	}
 
+	private IEnumerator Strike()
+	{
+		Statuslight.GetComponent<MeshRenderer>().material.color = new Color(1f, 0f, 0f);
+		yield return new WaitForSeconds(0.5f);
+		if (!solved)
+			Statuslight.GetComponent<MeshRenderer>().material.color = new Color(Rnd.Range(0, 4) / 3f, Rnd.Range(0, 4) / 3f, Rnd.Range(0, 4) / 3f);
+	}
+
+	private void Solve()
+	{
+		Statuslight.GetComponent<MeshRenderer>().material.color = new Color(0f, 1f, 0f);
+	}
+
 #pragma warning disable 414
 	private string TwitchHelpMessage = "'!{0} cycle' to cycle through the beans, '!{0} 1' to eat a bean in reading order (indexed at 1). Note that you cannot press an already eaten bean. e.g. '!{0} 1 25 12 17'";
 #pragma warning restore 414
@@ -223,7 +240,7 @@ public class jellyBeansScript : MonoBehaviour {
 		{
 			for (int i = 0; i < 25; i++)
 			{
-				while (i < 25 && Beans[i].transform.localScale.x < 0.01f)
+				while (i < 25 && Beans[i].transform.localScale.x < 0.001f)
 				{
 					i++;
 				}
@@ -252,7 +269,7 @@ public class jellyBeansScript : MonoBehaviour {
 				yield return null;
 				for (int j = 0; j < validCommands.Length; j++)
 				{
-					if (cmds[i] == validCommands[j] && Beans[j].transform.localScale.x > 0.01f) { Beans[j].OnInteract(); }
+					if (cmds[i] == validCommands[j] && Beans[j].transform.localScale.x > 0.001f) { Beans[j].OnInteract(); }
 				}
 				yield return new WaitForSeconds(0.5f);
 			}

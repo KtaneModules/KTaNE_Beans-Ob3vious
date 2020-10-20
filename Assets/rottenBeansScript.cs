@@ -13,6 +13,7 @@ public class rottenBeansScript : MonoBehaviour {
 	public KMBombInfo BombInfo;
 	public KMSelectable[] Beans;
 	public GameObject Text;
+	public GameObject Statuslight;
 	public KMBombModule Module;
 
 	private int[] beanArray = new int[9];
@@ -21,6 +22,7 @@ public class rottenBeansScript : MonoBehaviour {
 	private bool[] beansafe = new bool[9];
 	private int[] referArray = { -1, -1, -1, -1, -1, -1, -1, -1, -1 };
 	private int eatenbeans = 0;
+	private bool striked = false;
 
 	static int _moduleIdCounter = 1;
 	int _moduleID = 0;
@@ -54,20 +56,33 @@ public class rottenBeansScript : MonoBehaviour {
 						check = false;
 					}
 				}
-				if (!beansafe[referArray[pos]])
+				if (!striked)
 				{
-					Debug.LogFormat("[Rotten Beans #{0}] You shouldn't eat smelly beans.", _moduleID);
-					Module.HandleStrike();
+					if (!beansafe[referArray[pos]])
+					{
+						Debug.LogFormat("[Rotten Beans #{0}] You shouldn't eat smelly beans.", _moduleID);
+						Module.HandleStrike();
+						striked = true;
+						StartCoroutine(Strike());
+					}
+					else if (!beansafe[pos])
+					{
+						Debug.LogFormat("[Rotten Beans #{0}] You shouldn't touch smelly beans.", _moduleID);
+						Module.HandleStrike();
+						striked = true;
+						StartCoroutine(Strike());
+					}
+					else if (referArray[pos] != solution)
+					{
+						Debug.LogFormat("[Rotten Beans #{0}] Why did you eat bean {1} when bean {2} was perfectly available?", _moduleID, referArray[pos] + 1, solution + 1);
+						Module.HandleStrike();
+						striked = true;
+						StartCoroutine(Strike());
+					}
 				}
-				else if (!beansafe[pos])
+				else
 				{
-					Debug.LogFormat("[Rotten Beans #{0}] You shouldn't touch smelly beans.", _moduleID);
-					Module.HandleStrike();
-				}
-				else if (referArray[pos] != solution)
-				{
-					Debug.LogFormat("[Rotten Beans #{0}] Why did you eat bean {1} when bean {2} was perfectly available?", _moduleID, referArray[pos] + 1, solution + 1);
-					Module.HandleStrike();
+					Debug.LogFormat("[Beans #{0}] You might not know which beans were safe, the module will not strike you again.", _moduleID);
 				}
 				beansafe[referArray[pos]] = false;
 				//if (referArray[pos] / 3 != 0)
@@ -90,6 +105,7 @@ public class rottenBeansScript : MonoBehaviour {
 				if (eatenbeans == 3)
 				{
 					Module.HandlePass();
+					Solve();
 				}
 			}
 			//Beans[pos].GetComponent<Renderer>().enabled = false;
@@ -196,6 +212,20 @@ public class rottenBeansScript : MonoBehaviour {
 			Beans[i].transform.localEulerAngles = new Vector3(0f, offset[i], 0f);
 			beansafe[i] = valid[beanArray[i]];
 		}
+		Statuslight.GetComponent<MeshRenderer>().material.color = new Color(96 / 255f, 64 / 255f, 32 / 255f);
+	}
+
+	private IEnumerator Strike()
+	{
+		Statuslight.GetComponent<MeshRenderer>().material.color = new Color(colours[0][1] / 255f, colours[1][1] / 255f, colours[2][1] / 255f);
+		yield return new WaitForSeconds(0.5f);
+		if (eatenbeans < 3)
+			Statuslight.GetComponent<MeshRenderer>().material.color = new Color(96 / 255f, 64 / 255f, 32 / 255f);
+	}
+
+	private void Solve()
+	{
+		Statuslight.GetComponent<MeshRenderer>().material.color = new Color(colours[0][0] / 255f, colours[1][0] / 255f, colours[2][0] / 255f);
 	}
 
 #pragma warning disable 414

@@ -13,6 +13,7 @@ public class coolBeansScript : MonoBehaviour {
 	public KMBombInfo BombInfo;
 	public KMSelectable[] Beans;
 	public GameObject Text;
+	public GameObject Statuslight;
 	public KMBombModule Module;
 	public Material meltmat;
 
@@ -51,7 +52,7 @@ public class coolBeansScript : MonoBehaviour {
 				}
 				else
 				{
-					int solution = 0;
+					int solution = -1;
 					bool check = true;
 					for (int i = 8; i > -1 && check; i--)
 					{
@@ -61,19 +62,28 @@ public class coolBeansScript : MonoBehaviour {
 							check = false;
 						}
 					}
-					if (!beansafe[pos])
+					if (solution != -1)
 					{
-						string[] colour = { "n orange", " yellow", " green" };
-						if (safetypes[beanArray[pos]])
-							Debug.LogFormat("[Cool Beans #{0}] Eating bean {1} became unhygienic, remember?", _moduleID, pos + 1);
-						else
-							Debug.LogFormat("[Cool Beans #{0}] You already ate a{1} bean.", _moduleID, colour[beanArray[pos]]);
-						Module.HandleStrike();
+						if (!beansafe[pos])
+						{
+							string[] colour = { "n orange", " yellow", " green" };
+							if (safetypes[beanArray[pos]])
+								Debug.LogFormat("[Cool Beans #{0}] Eating bean {1} became unhygienic, remember?", _moduleID, pos + 1);
+							else
+								Debug.LogFormat("[Cool Beans #{0}] You already ate a{1} bean.", _moduleID, colour[beanArray[pos]]);
+							Module.HandleStrike();
+							StartCoroutine(Strike());
+						}
+						else if (pos != solution)
+						{
+							Debug.LogFormat("[Cool Beans #{0}] Why did you eat bean {1} when bean {2} was perfectly available?", _moduleID, pos + 1, solution + 1);
+							Module.HandleStrike();
+							StartCoroutine(Strike());
+						}
 					}
-					else if (pos != solution)
+					else
 					{
-						Debug.LogFormat("[Cool Beans #{0}] Why did you eat bean {1} when bean {2} was perfectly available?", _moduleID, pos + 1, solution + 1);
-						Module.HandleStrike();
+						Debug.LogFormat("[Cool Beans #{0}] There was no valid bean, so you will not get a strike.", _moduleID);
 					}
 					beansafe[pos] = false;
 					if (pos / 3 != 0)
@@ -97,6 +107,7 @@ public class coolBeansScript : MonoBehaviour {
 					if (eatenbeans == 3)
 					{
 						Module.HandlePass();
+						Solve();
 					}
 				}
 				//Beans[pos].GetComponent<Renderer>().enabled = false;
@@ -222,6 +233,7 @@ public class coolBeansScript : MonoBehaviour {
 				}
 			}
 		}
+		Statuslight.GetComponent<MeshRenderer>().material = meltmat;
 		StartCoroutine(Wobble());
 	}
 
@@ -271,6 +283,7 @@ public class coolBeansScript : MonoBehaviour {
 				if (sound != null) { sound.StopSound(); sound = null; }
 				Debug.LogFormat("[Cool Beans #{0}] This bean can't be heated.", _moduleID);
 				Module.HandleStrike();
+				StartCoroutine(Strike());
 				heating = false;
 			}
 			else
@@ -285,12 +298,26 @@ public class coolBeansScript : MonoBehaviour {
 				if (sound != null) { sound.StopSound(); sound = null; }
 				if (heating)
 				{
-					Debug.LogFormat("[Cool Beans #{0}] You let the microwave go off", _moduleID);
+					Debug.LogFormat("[Cool Beans #{0}] You let the microwave go off.", _moduleID);
 					Module.HandleStrike();
+					StartCoroutine(Strike());
 					Audio.PlaySoundAtTransform("Mbeep", Module.transform);
 				}
 			}
 		}
+	}
+
+	private IEnumerator Strike()
+	{
+		Statuslight.GetComponent<MeshRenderer>().material.color = new Color(colours[0][0] / 255f, colours[1][0] / 255f, colours[2][0] / 255f);
+		yield return new WaitForSeconds(0.5f);
+		if (eatenbeans < 3)
+			Statuslight.GetComponent<MeshRenderer>().material.color = new Color(colours[0][1] / 255f, colours[1][1] / 255f, colours[2][1] / 255f);
+	}
+
+	private void Solve()
+	{
+		Statuslight.GetComponent<MeshRenderer>().material.color = new Color(colours[0][2] / 255f, colours[1][2] / 255f, colours[2][2] / 255f);
 	}
 
 #pragma warning disable 414
@@ -337,6 +364,7 @@ public class coolBeansScript : MonoBehaviour {
 					if (command[i] == validCommands[j] && Beans[j].transform.localScale.x > 0.01f)
 					{
 						Beans[j].OnInteract();
+						yield return null;
 						while (frozen[j] && heating)
 							yield return null;
 						Beans[j].OnInteractEnded();
@@ -380,6 +408,8 @@ public class coolBeansScript : MonoBehaviour {
 					yield return true;
 				}
 				Beans[i].OnInteract();
+				yield return null;
+				Beans[i].OnInteractEnded();
 				yield return true;
 			}
 		}

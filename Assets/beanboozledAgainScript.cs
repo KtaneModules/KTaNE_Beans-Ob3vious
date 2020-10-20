@@ -16,6 +16,7 @@ public class beanboozledAgainScript : MonoBehaviour {
 	public TextMesh[] Display;
 	public TextMesh[] BeanTexts;
 	public MeshRenderer[] BeanLights;
+	public GameObject Statuslight;
 	public KMBombModule Module;
 
 	private float[] offset = new float[8];
@@ -86,6 +87,7 @@ public class beanboozledAgainScript : MonoBehaviour {
 					if (correct.Count(x => x) == 5)
 					{
 						Module.HandlePass();
+						Solve();
 						for (int i = 0; i < Beans.Length; i++)
 						{
 							Beans[i].GetComponent<MeshRenderer>().material.color = new Color(0, 1, 0);
@@ -119,6 +121,7 @@ public class beanboozledAgainScript : MonoBehaviour {
 						almost = new bool[5];
 						presscount = 0;
 						Module.HandleStrike();
+						StartCoroutine(Strike());
 						wordindex = Rnd.Range(0, words.Length);
 						for (int i = 0; i < 8; i++)
 						{
@@ -276,26 +279,23 @@ public class beanboozledAgainScript : MonoBehaviour {
 			Initvalues[i] = (base36[0] + base36[1]) % 36;
 		}
 		Debug.LogFormat("[Beanboozled Again #{0}] I values in order are {1}.", _moduleID, Initvalues.Join(", "));
-		string[] interpretant = { "<>+-[],.←→↑↓⇄⇆↻↺", ">,-↓⇆↑↺]+→←⇄.↻<[", "-→⇄←↑.<+↓>⇆]↻[,↺", "→↑↓[>↻←],⇆+<↺⇄-.", "↺.←+↻-↓⇄→>[,↑<⇆]", "]>←⇆[→↓↑⇄↺.+↻-,<", ",⇄↑>⇆↻→<[↓].-+↺←", "←→-↑+>↻↺⇄⇆.↓<][," };
+		string[] interpretant = { "<>+-[],.←→↑↓*∴∵", ">,-↓↑∵]+→←*.∴<[", "-→*←↑.<+↓>]∴[,∵", "→↑↓[>∴←],*+<∵-.", "∵.←+∴-↓*→>[,↑<]", "]>←[→↓↑*∵.+∴-,<", ",↑>*∴→<[↓].-+∵←", "←→-↑+>∴∵*.↓<][," };
 		BeanFend = new int[8];
 		for (int i = 0; i < 8; i++)
 		{
 			string command = "";
 			for (int j = 0; j < 8; j++)
 			{
-				command += interpretant[i][beanArray[j][3]];
+				command += interpretant[i][beanArray[j][3] - 1];
 			}
 			for (int j = 0; j < 8; j++)
 			{
-				command += interpretant[i][beanArray[j][4]];
+				command += interpretant[i][beanArray[j][4] - 1];
 			}
 			BeanFmem = new int[] { i, -1, -1, -1 };
-			BeanFvalues[i] = BeanF(Initvalues, command, i);
-			for (int j = 0; j < 8; j++)
-			{
-				BeanFend[j] += BeanFvalues[i][j];
-			}
-			Debug.LogFormat("[Beanboozled Again #{0}] Bean {1} uses command '{2}', resulting in {3}.", _moduleID, i + 1, command, BeanFvalues[i].Join(", "));
+			BeanFvalues[i] = BeanF(new int[] { 0, 0, 0, 0, 0, 0, 0 }.Take(i).Concat(new int[] { Initvalues[i] }).Concat(new int[] { 0, 0, 0, 0, 0, 0, 0 }.Skip(i)).ToArray(), command, i);
+			BeanFend[i] = BeanFvalues[i].Sum();
+			Debug.LogFormat("[Beanboozled Again #{0}] Bean {1} uses command '{2}', resulting in {3} and a sum of {4}.", _moduleID, i + 1, command, BeanFvalues[i].Join(", "), BeanFend[i]);
 		}
 		Debug.LogFormat("[Beanboozled Again #{0}] For all beans, sums result in {1}.", _moduleID, BeanFend.Join(", "));
 		for (int i = 0; i < 8; i++)
@@ -588,10 +588,12 @@ public class beanboozledAgainScript : MonoBehaviour {
 						}
 					}
 					break;
-				case '⇄':
-					BeanFmem[2] = BeanFmem[0];
-					if (BeanFmem[3] != -1)
+				case '*':
+					if (BeanFmem[2] == -1)
+						BeanFmem[2] = BeanFmem[0];
+					else
 					{
+						BeanFmem[3] = BeanFmem[0];
 						int backup = storage[BeanFmem[2]];
 						storage[BeanFmem[2]] = storage[BeanFmem[3]];
 						storage[BeanFmem[3]] = backup;
@@ -599,18 +601,7 @@ public class beanboozledAgainScript : MonoBehaviour {
 						BeanFmem[3] = -1;
 					}
 					break;
-				case '⇆':
-					BeanFmem[3] = BeanFmem[0];
-					if (BeanFmem[2] != -1)
-					{
-						int backup = storage[BeanFmem[2]];
-						storage[BeanFmem[2]] = storage[BeanFmem[3]];
-						storage[BeanFmem[3]] = backup;
-						BeanFmem[2] = -1;
-						BeanFmem[3] = -1;
-					}
-					break;
-				case '↻':
+				case '∴':
 					{
 						bool steady2 = true;
 						for (int j = 0; j < 36 && steady2; j++)
@@ -654,7 +645,7 @@ public class beanboozledAgainScript : MonoBehaviour {
 						}
 					}
 					break;
-				case '↺':
+				case '∵':
 					{
 						bool steady2 = true;
 						for (int j = 0; j < 36 && steady2; j++)
@@ -745,14 +736,38 @@ public class beanboozledAgainScript : MonoBehaviour {
 		return values;
 	}
 
+	private IEnumerator Strike()
+	{
+		Statuslight.GetComponent<MeshRenderer>().material.color = new Color(1f, 0.33f, 0f);
+		yield return new WaitForSeconds(0.5f);
+		Statuslight.GetComponent<MeshRenderer>().material.color = new Color(0.67f, 0.33f, 0f);
+	}
+
+	private void Solve()
+	{
+		Statuslight.GetComponent<MeshRenderer>().material.color = new Color(0.33f, 1f, 0f);
+	}
+
 #pragma warning disable 414
-	private string TwitchHelpMessage = "'!{0} cycle' to cycle through the beans, '!{0} 1 at 69420' to eat a bean in reading order (indexed at 1) when the total amount of seconds on the timer is 69420.";
+	private string TwitchHelpMessage = "'!{0}' reset to reset the inputs, '!{0} cycle' to cycle through the beans, '!{0} 1 at 69420' to eat a bean in reading order (indexed at 1) when the total amount of seconds on the timer is 69420.";
 #pragma warning restore 414
 	IEnumerator ProcessTwitchCommand(string command)
 	{
 		yield return null;
 		command = command.ToLowerInvariant();
-		if (command == "cycle")
+		if (command == "reset")
+		{
+			correct = new bool[5];
+			almost = new bool[5];
+			presscount = 0;
+			for (int i = 0; i < BeanLights.Length; i++)
+			{
+				BeanLights[i].GetComponent<MeshRenderer>().material.color = new Color(0f, 0f, 0f);
+			}
+			Debug.LogFormat("[Beanboozled Again #{0}] Resetted inputs.", _moduleID);
+			CalcBeans();
+		}
+		else if(command == "cycle")
 		{
             for (int i = 0; i < 8; i++)
             {
