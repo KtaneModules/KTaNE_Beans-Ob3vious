@@ -268,76 +268,52 @@ public class beanboozledAgainScript : MonoBehaviour {
 			for (int j = 0; j < 36; j++)
 			{
 				if (chars36[j] == CharDecrypt(new char[] { BeanTexts[2 * i].text[0], BeanTexts[2 * i + 1].text[0] }))
-				{
 					base36[0] = j;
-				}
 				if (chars36[j] == CharDecrypt(new char[] { BeanTexts[2 * i + 1].text[0], BeanTexts[2 * i].text[0] }))
-				{
 					base36[1] = j;
-				}
 			}
 			Initvalues[i] = (base36[0] + base36[1]) % 36;
 		}
 		Debug.LogFormat("[Beanboozled Again #{0}] I values in order are {1}.", _moduleID, Initvalues.Join(", "));
 		string[] interpretant = { "<>+-[],.←→↑↓*∴∵", ">,-↓↑∵]+→←*.∴<[", "-→*←↑.<+↓>]∴[,∵", "→↑↓[>∴←],*+<∵-.", "∵.←+∴-↓*→>[,↑<]", "]>←[→↓↑*∵.+∴-,<", ",↑>*∴→<[↓].-+∵←", "←→-↑+>∴∵*.↓<][," };
 		BeanFend = new int[8];
+		string command = "";
 		for (int i = 0; i < 8; i++)
-		{
-			string command = "";
-			for (int j = 0; j < 8; j++)
-			{
-				command += interpretant[i][beanArray[j][3] - 1];
-			}
-			for (int j = 0; j < 8; j++)
-			{
-				command += interpretant[i][beanArray[j][4] - 1];
-			}
-			BeanFmem = new int[] { i, -1, -1, -1 };
-			BeanFvalues[i] = BeanF(new int[] { 0, 0, 0, 0, 0, 0, 0 }.Take(i).Concat(new int[] { Initvalues[i] }).Concat(new int[] { 0, 0, 0, 0, 0, 0, 0 }.Skip(i)).ToArray(), command, i);
-			BeanFend[i] = BeanFvalues[i].Sum();
-			Debug.LogFormat("[Beanboozled Again #{0}] Bean {1} uses command '{2}', resulting in {3} and a sum of {4}.", _moduleID, i + 1, command, BeanFvalues[i].Join(", "), BeanFend[i]);
-		}
-		Debug.LogFormat("[Beanboozled Again #{0}] For all beans, sums result in {1}.", _moduleID, BeanFend.Join(", "));
+			command += interpretant[i][beanArray[i][3] - 1];
 		for (int i = 0; i < 8; i++)
-		{
+			command += interpretant[i][beanArray[i][4] - 1];
+		for (int i = 0; i < 8; i++)
+			if (beanArray[i][0] != 0)
+				command += interpretant[i][beanArray[i][0] - 1];
+		BeanFmem = new int[] { (wordindex - 1) % 8, -1, -1, -1 };
+		BeanFend = BeanF(Initvalues, command, 4);
+		Debug.LogFormat("[Beanboozled Again #{0}] Used command is '{1}', resulting in {2}.", _moduleID, command, BeanFend.Join(", "));
+		for (int i = 0; i < 8; i++)
 			Setnums[i] = int.Parse((setnums[0][i] * 10 + setnums[1][i] + 11).ToString() + (SetDecrypt(BeanTexts[2 * i].text[0]) + SetDecrypt(BeanTexts[2 * i + 1].text[0])).ToString());
-		}
 		Debug.LogFormat("[Beanboozled Again #{0}] Raw set values before modulo are {1}.", _moduleID, Setnums.Join(", "));
 		for (int i = 0; i < 8; i++)
-		{
 			Setnums[i] %= BeanFend[i] + 1;
-		}
 		Debug.LogFormat("[Beanboozled Again #{0}] Set values after modulo are {1}.", _moduleID, Setnums.Join(", "));
 		for (int i = 0; i < 8; i++)
-		{
 			Totalnums[i] = Setnums[i] * (numkey[0] * 100 + numkey[1] * 10 + numkey[2]) + BeanFend[i];
-		}
 		Debug.LogFormat("[Beanboozled Again #{0}] Total values are {1}.", _moduleID, Totalnums.Join(", "));
 		for (int i = 0; i < 8; i++)
-		{
-			ColValues[i] = beanArray[i][0] * 240 + beanArray[i][1] * beanArray[i][2];
-		}
+			ColValues[i] = beanArray[i][0] * 241 + beanArray[i][1] * beanArray[i][2];
 		Debug.LogFormat("[Beanboozled Again #{0}] Colour values are {1}.", _moduleID, ColValues.Join(", "));
 		List<int> tempvalues = Totalnums.ToList();
 		int[] order = { };
 		while (tempvalues.ToArray().Length > 0)
 		{
 			for (int i = 0; i < 8; i++)
-			{
 				if (Totalnums[i] == tempvalues.Min())
-				{
 					order = order.Concat(new int[] { i }).ToArray();
-				}
-			}
 			int min = tempvalues.Min();
 			for (int i = 0; i < tempvalues.ToArray().Length; i++)
-			{
 				if (tempvalues.ToArray()[i] == min)
 				{
 					tempvalues.RemoveAt(i);
 					i--;
 				}
-			}
 		}
 		Debug.LogFormat("[Beanboozled Again #{0}] Bean indices from lowest to highest are {1}.", _moduleID, order.Select(x => x + 1).Join(", "));
 		GoodPress[0] = order[presscount + 2];
@@ -500,29 +476,21 @@ public class beanboozledAgainScript : MonoBehaviour {
 					break;
 				case '.':
 					if (BeanFmem[1] != -1)
-					{
 						storage[BeanFmem[0]] = BeanFmem[1];
-					}
 					break;
 				case '←':
 					{
 						int x = 0;
 						int y = 0;
 						for (int j = 0; j < 36; j++)
-						{
 							if (cipherkey[j] == chars36[storage[BeanFmem[0]]])
 							{
 								x = (j + 5) % 6;
 								y = j / 6;
 							}
-						}
 						for (int j = 0; j < 36; j++)
-						{
 							if (chars36[j] == cipherkey[x + 6 * y])
-							{
 								storage[BeanFmem[0]] = j;
-							}
-						}
 					}
 					break;
 				case '→':
@@ -530,20 +498,14 @@ public class beanboozledAgainScript : MonoBehaviour {
 						int x = 0;
 						int y = 0;
 						for (int j = 0; j < 36; j++)
-						{
 							if (cipherkey[j] == chars36[storage[BeanFmem[0]]])
 							{
 								x = (j + 1) % 6;
 								y = j / 6;
 							}
-						}
 						for (int j = 0; j < 36; j++)
-						{
 							if (chars36[j] == cipherkey[x + 6 * y])
-							{
 								storage[BeanFmem[0]] = j;
-							}
-						}
 					}
 					break;
 				case '↑':
@@ -551,20 +513,14 @@ public class beanboozledAgainScript : MonoBehaviour {
 						int x = 0;
 						int y = 0;
 						for (int j = 0; j < 36; j++)
-						{
 							if (cipherkey[j] == chars36[storage[BeanFmem[0]]])
 							{
 								x = j % 6;
 								y = (j / 6 + 5) % 6;
 							}
-						}
 						for (int j = 0; j < 36; j++)
-						{
 							if (chars36[j] == cipherkey[x + 6 * y])
-							{
 								storage[BeanFmem[0]] = j;
-							}
-						}
 					}
 					break;
 				case '↓':
@@ -572,20 +528,14 @@ public class beanboozledAgainScript : MonoBehaviour {
 						int x = 0;
 						int y = 0;
 						for (int j = 0; j < 36; j++)
-						{
 							if (cipherkey[j] == chars36[storage[BeanFmem[0]]])
 							{
 								x = j % 6;
 								y = (j / 6 + 1) % 6;
 							}
-						}
 						for (int j = 0; j < 36; j++)
-						{
 							if (chars36[j] == cipherkey[x + 6 * y])
-							{
 								storage[BeanFmem[0]] = j;
-							}
-						}
 					}
 					break;
 				case '*':
@@ -605,7 +555,6 @@ public class beanboozledAgainScript : MonoBehaviour {
 					{
 						bool steady2 = true;
 						for (int j = 0; j < 36 && steady2; j++)
-						{
 							if (cipherkey[j] == chars36[storage[BeanFmem[0]]])
 							{
 								int x = j % 6;
@@ -634,22 +583,16 @@ public class beanboozledAgainScript : MonoBehaviour {
 									x = pivot + xoff;
 								}
 								for (int k = 0; k < 36; k++)
-								{
 									if (chars36[k] == cipherkey[x + 6 * y])
-									{
 										storage[BeanFmem[0]] = k;
-									}
-								}
 								steady2 = false;
 							}
-						}
 					}
 					break;
 				case '∵':
 					{
 						bool steady2 = true;
 						for (int j = 0; j < 36 && steady2; j++)
-						{
 							if (cipherkey[j] == chars36[storage[BeanFmem[0]]])
 							{
 								int x = j % 6;
@@ -678,15 +621,10 @@ public class beanboozledAgainScript : MonoBehaviour {
 									x = pivot;
 								}
 								for (int k = 0; k < 36; k++)
-								{
 									if (chars36[k] == cipherkey[x + 6 * y])
-									{
 										storage[BeanFmem[0]] = k;
-									}
-								}
 								steady2 = false;
 							}
-						}
 					}
 					break;
 				default:
@@ -706,13 +644,9 @@ public class beanboozledAgainScript : MonoBehaviour {
 		for (int i = 0; i < 30; i++)
 		{
 			if (topkey[i] == letter[0])
-			{
 				x = i % 6;
-			}
 			if (bottomkey[i] == letter[1])
-			{
 				y = i % 6;
-			}
 		}
 		return key[x + y * 6];
 	}
@@ -725,13 +659,9 @@ public class beanboozledAgainScript : MonoBehaviour {
 		for (int i = 0; i < 30; i++)
 		{
 			if (topkey[i] == letter)
-			{
 				values += (i / 6) + 1;
-			}
 			if (bottomkey[i] == letter)
-			{
 				values += (i / 6) + 1;
-			}
 		}
 		return values;
 	}
@@ -761,29 +691,23 @@ public class beanboozledAgainScript : MonoBehaviour {
 			almost = new bool[5];
 			presscount = 0;
 			for (int i = 0; i < BeanLights.Length; i++)
-			{
 				BeanLights[i].GetComponent<MeshRenderer>().material.color = new Color(0f, 0f, 0f);
-			}
 			Debug.LogFormat("[Beanboozled Again #{0}] Resetted inputs.", _moduleID);
 			CalcBeans();
 		}
-		else if(command == "cycle")
-		{
-            for (int i = 0; i < 8; i++)
-            {
-                while (i < 8 && Beans[i].transform.localScale.x < 0.01f)
-                {
+		else if (command == "cycle")
+			for (int i = 0; i < 8; i++)
+			{
+				while (i < 8 && Beans[i].transform.localScale.x < 0.01f)
 					i++;
-                }
-                if (i != 8)
-                {
+				if (i != 8)
+				{
 					Beans[i].OnHighlight();
 					yield return new WaitForSeconds(0.9f);
 					Beans[i].OnHighlightEnded();
 					yield return new WaitForSeconds(0.1f);
 				}
-            }
-		}
+			}
 		else
 		{
 			string validCommands = "12345678";
@@ -795,16 +719,10 @@ public class beanboozledAgainScript : MonoBehaviour {
 				yield break;
 			}
 			while ((int)BombInfo.GetTime() != int.Parse(cmds[2]))
-			{
 				yield return "trycancel Your button press for Beanboozled Again is cancelled.";
-			}
 			for (int i = 0; i < validCommands.Length; i++)
-			{
 				if (validCommands[i] == cmds[0][0])
-				{
 					Beans[i].OnInteract();
-				}
-			}
 			yield return "strike";
 			yield return "solve";
 		}
@@ -817,10 +735,8 @@ public class beanboozledAgainScript : MonoBehaviour {
 		while (presscount != 5)
 		{
 			if (correct.Count(x => x) == presscount)
-			{
 				while (((int)BombInfo.GetTime() % (Setnums[GoodPress[0]] + ((wordindex / 8) * 10 + wordindex % 8 + 11)) - 1) % 9 + 1 != GoodPress[1])
 					yield return true;
-			}
 			Beans[GoodPress[0]].OnInteract();
 			yield return true;
 		}
