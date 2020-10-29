@@ -285,7 +285,7 @@ public class beanboozledAgainScript : MonoBehaviour {
 		for (int i = 0; i < 8; i++)
 			if (beanArray[i][0] != 0)
 				command += interpretant[i][beanArray[i][0] - 1];
-		BeanFmem = new int[] { (wordindex - 1) % 8, -1, -1, -1 };
+		BeanFmem = new int[] { wordindex % 8, -1, -1, -1 };
 		BeanFend = BeanF(Initvalues, command, 4);
 		Debug.LogFormat("[Beanboozled Again #{0}] Used command is '{1}', resulting in {2}.", _moduleID, command, BeanFend.Join(", "));
 		for (int i = 0; i < 8; i++)
