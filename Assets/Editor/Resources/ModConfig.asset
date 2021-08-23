@@ -15,10 +15,11 @@ MonoBehaviour:
   title: Beans Modpack
   author: Obvious
   description: 'Well then... the moment you''ve not been waiting for. Beans modules
-    :). weird contributed to BeanA, the other modules are in collaboration with GhostSalt.
+    :)
 
-    This pack includes: Beans, Cool Beans, Rotten Beans, Long Beans, Jelly Beans and
-    Beanboozled Again.
+    This pack includes: Beans, Cool Beans, Rotten Beans, Long Beans, Jelly Beans,
+    Kidney Beans, Chilli Beans, Bean Sprouts, Fake Beans, Big Bean, Coffee Beans,
+    Soy Beans and Beanboozled Again.
 
     Poggers! Poggers! Poggers! Poggers! Poggers! Poggers! Poggers! Poggers! Poggers!
     Poggers! Poggers! Poggers! Poggers! Poggers! Poggers! Poggers! Poggers! Poggers!
@@ -28,6 +29,6 @@ MonoBehaviour:
     Poggers! Poggers! Poggers! Poggers! Poggers! Poggers! Poggers! Poggers! Poggers!
     Poggers! Poggers! Poggers! Poggers! Poggers! Poggers! Poggers! Poggers! Poggers!
     Poggers! Poggers! Poggers! Poggers! Poggers! Poggers! Poggers! Poggers! Poggers!'
-  version: 1.4
+  version: 1.8
   outputFolder: build
-  previewImage: {fileID: 2800000, guid: 5e314d2b6ac98294ea5a028b0c0ae488, type: 3}
+  previewImage: {fileID: 2800000, guid: 09eb4a8e19369f64f818f5fe0bab7fc4, type: 3}
