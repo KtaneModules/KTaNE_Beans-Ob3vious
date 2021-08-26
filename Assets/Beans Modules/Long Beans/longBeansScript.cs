@@ -212,19 +212,20 @@ public class longBeansScript : MonoBehaviour {
 				for (int j = 0; j < validCommands.Length; j++)
 				{
 					if (j < 10)
+					{
 						if (command[i] == validCommands[j] && SmolBeans[j].transform.localScale.x > 0.01f)
 						{
 							if (BigBeans[j % 5].transform.localScale.x > 0.01f)
 							{
 								BigBeans[j % 5].OnInteract();
-								yield return new WaitForSeconds(0.25f);
+								yield return null;
 							}
 							SmolBeans[j].OnInteract();
 						}
+					}
 					else if (command[i] == validCommands[j] && BigBeans[j - 10].transform.localScale.x > 0.01f)
-							BigBeans[j - 10].OnInteract();
+						BigBeans[j - 10].OnInteract();
 				}
-				yield return new WaitForSeconds(0.5f);
 			}
 		}
 		yield return null;
