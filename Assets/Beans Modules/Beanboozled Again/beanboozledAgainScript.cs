@@ -36,7 +36,7 @@ public class beanboozledAgainScript : MonoBehaviour {
     private int[] Totalnums = new int[8];
     private int[] ColValues = new int[8];
     private int[] GoodPress = new int[2];
-    private int[] PressIndices = new int[4];
+    private int[] PressIndices = new int[5];
     private bool[] correct = new bool[5];
     private bool[] almost = new bool[5];
     private int presscount = 0;
@@ -87,8 +87,8 @@ public class beanboozledAgainScript : MonoBehaviour {
                         for (int i = 0; i < Beans.Length; i++)
                         {
                             Beans[i].GetComponent<MeshRenderer>().material.color = new Color(0.33f, 1, 0);
-                            BeanTexts[2 * i].color = new Color(0.33f, 1, 0);
-                            BeanTexts[2 * i + 1].color = new Color(0.33f, 1, 0);
+                            BeanTexts[2 * i].text = "";
+                            BeanTexts[2 * i + 1].text = "";
                         }
                         for (int i = 0; i < 2; i++)
                         {
@@ -166,7 +166,12 @@ public class beanboozledAgainScript : MonoBehaviour {
                 }
             }
             else
+            {
                 Beans[pos].transform.localScale = new Vector3(0f, 0f, 0f);
+                for (int i = 0; i < 5; i++)
+                    if (PressIndices[i] == pos)
+                        BeanLights[i].material.color = new Color(0, 0, 0);
+            }
             return false;
         };
     }
@@ -292,10 +297,11 @@ public class beanboozledAgainScript : MonoBehaviour {
         }
         Debug.LogFormat("[Beanboozled Again #{0}] Bean indices from lowest to highest are {1}.", _moduleID, order.Select(x => x + 1).Join(", "));
         GoodPress[0] = order[presscount + 2];
+        PressIndices[presscount] = GoodPress[0];
         if (presscount < 4)
         {
             GoodPress[1] = (ColValues[GoodPress[0]] - 1) % 9 + 1;
-            PressIndices[presscount] = GoodPress[0];
+            
             Debug.LogFormat("[Beanboozled Again #{0}] Pressed {1} beans so far, making the bean to press bean {2}. Formula becomes: DR(t % {3}) = {4}.", _moduleID, presscount, GoodPress[0] + 1, Setnums[GoodPress[0]] + ((wordindex / 8) * 10 + wordindex % 8 + 11), GoodPress[1]);
         }
         else
@@ -312,7 +318,7 @@ public class beanboozledAgainScript : MonoBehaviour {
             for (int i = 0; i < 8; i++)
                 Beans[i].transform.localEulerAngles = new Vector3(-90f, Mathf.Sin(t + timeoffset[i]) * wobbliness[i] + rotational[i] * t + offset[i], 0f);
             yield return null;
-            t += Time.deltaTime * 10f;
+            t += Time.deltaTime * (presscount == 5 ? 1f : 10f);
         }
     }
 
@@ -543,6 +549,46 @@ public class beanboozledAgainScript : MonoBehaviour {
     private void Solve()
     {
         Statuslight.GetComponent<MeshRenderer>().material.color = new Color(0.33f, 1f, 0f);
+        offset = new float[8];
+        rotational = new float[8];
+        for (int i = 0; i < 8; i++)
+        {
+            wobbliness[i] = 180;
+            timeoffset[i] = -(float)((i - (i / 4) * 3) * Math.PI / 16f);
+        }
+        StartCoroutine(SolveTune());
+    }
+
+    private IEnumerator SolveTune()
+    {
+        Audio.PlaySoundAtTransform("SolveTune", Module.transform);
+        yield return new WaitForSeconds(5.120f);
+        int pos = 0;
+        for (int i = 7; i >= 0; i--)
+        {
+            int c = (pos + pos / 4) % 2;
+            Beans[pos].GetComponent<MeshRenderer>().material.color = new Color(c / 3f + 0.33f, c / 3f + 0.67f, c / 3f);
+            yield return new WaitForSeconds(0.485f);
+            pos += i % 2 == 0 ? -i : i;
+        }
+        for (int i = 0; i < 2; i++)
+        {
+            for (int j = 0; j < 4; j++)
+                Beans[j % 2 + 2 * i + 4 * (j / 2)].GetComponent<MeshRenderer>().material.color = new Color(0.33f, 1, 0);
+            yield return new WaitForSeconds(0.485f);
+        }
+        for (int i = 0; i < 8; i++)
+        {
+            int c = (i + i / 4) % 2;
+            Beans[i].GetComponent<MeshRenderer>().material.color = new Color(c / 3f + 0.33f, c / 3f + 0.67f, c / 3f);
+        }
+        yield return new WaitForSeconds(0.485f);
+        wobbliness = new float[8];
+        for (int i = 0; i < 8; i++)
+        {
+            Beans[i].GetComponent<MeshRenderer>().material.color = new Color(0.33f, 1, 0);
+            offset[i] = Rnd.Range(0, 360);
+        }
     }
 
 #pragma warning disable 414
