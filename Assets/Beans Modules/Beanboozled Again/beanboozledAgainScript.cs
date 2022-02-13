@@ -626,7 +626,7 @@ public class beanboozledAgainScript : MonoBehaviour {
             string validCommands = "12345678";
             string[] cmds = command.Split(' ');
             int a;
-            if (!validCommands.Contains(cmds[0][0]) || cmds[0].Length != 1 || cmds[1] != "at" || !int.TryParse(cmds[2], out a) || cmds.Length != 3)
+            if (cmds.Length != 3 || !validCommands.Contains(cmds[0][0]) || cmds[0].Length != 1 || cmds[1] != "at" || !int.TryParse(cmds[2], out a))
             {
                 yield return "sendtochaterror Invalid command.";
                 yield break;
