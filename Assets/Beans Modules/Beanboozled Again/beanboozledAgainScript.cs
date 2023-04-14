@@ -27,7 +27,7 @@ public class beanboozledAgainScript : MonoBehaviour {
     private int[] numkey = new int[3];
     private int[][] setnums = new int[][] { new int[] { }, new int[] { }, new int[] { }, new int[] { } };
     private readonly int[][] colours = { new int[] { 0, 0, 0 }, new int[] { 1, 1, 0 }, new int[] { 2, 1, 0 }, new int[] { 1, 2, 0 }, new int[] { 2, 2, 0 }, new int[] { 3, 1, 0 }, new int[] { 1, 3, 0 }, new int[] { 3, 2, 0 }, new int[] { 2, 3, 0 }, new int[] { 3, 3, 0 }, new int[] { 2, 2, 1 }, new int[] { 3, 2, 1 }, new int[] { 2, 3, 1 }, new int[] { 3, 3, 1 }, new int[] { 3, 3, 2 }, new int[] { 3, 3, 3 } };
-    private readonly string[] words = { "BEANBOOZLED", "BEANEDAGAIN", "BAMBOOZLING", "TOOCOLOURFUL", "BEANINGS", "HYPERBEANS", "ULTRABEANS", "COOLBEANS", "ROTTENBEANS", "JELLYBEANS", "LONGBEANS", "BEANBEANBEAN", "NOTGOODBEAN", "SAUCEDBEANS", "BAKEDBEANS", "BEANOVERLOAD", "BEANCIPHER", "CANTBEATBEANS", "BURNEDBEAN", "KILLERBEAN", "INEDIBLE", "SURELYNOTCORN", "BEANKRUPT", "SUPERMARKET", "GROCERIES", "ROWANATKINSON", "MEANDTHEBOYS", "AT3AMLOOKING", "FORBEANS", "DANSBEANS", "POGBEANS", "BEANSANITY" };
+    private readonly string[] words = { "BEANBOOZLED", "BEANEDAGAIN", "BAMBOOZLING", "TOOCOLOURFUL", "BEANINGS", "HYPERBEANS", "ULTRABEANS", "COOLBEANS", "ROTTENBEANS", "JELLYBEANS", "LONGBEANS", "BEANBEANBEAN", "NOTGOODBEAN", "SAUCYBEANS", "BAKEDBEANS", "BEANOVERLOAD", "BEANCIPHER", "CANTBEATBEANS", "BURNEDBEAN", "KILLERBEAN", "INEDIBLE", "SURELYNOTCORN", "BEANKRUPT", "SUPERMARKET", "GROCERIES", "ROWANATKINSON", "MEANDTHEBOYS", "AT3AMLOOKING", "FORBEANS", "DANSBEANS", "POGBEANS", "BEANSANITY" };
     private int wordindex;
     private int[] Initvalues = new int[8];
     private int[] BeanFmem = { 0, -1, -1, -1 };
